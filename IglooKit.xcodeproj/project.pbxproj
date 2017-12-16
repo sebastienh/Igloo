@@ -168,7 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				0E9838931FE5964C00BD3E31 /* Cartfile */,
-				0E9838701FE58F8F00BD3E31 /* Metadata */,
+				0E9838901FE5926500BD3E31 /* README.md */,
+				0E98388F1FE5924800BD3E31 /* LICENSE */,
 				0E98386F1FE58F8700BD3E31 /* Sources */,
 				0E9838CE1FE5A06E00BD3E31 /* IglooKitTests */,
 				0E9838401FE58EFE00BD3E31 /* Products */,
@@ -205,15 +206,6 @@
 				0E98386A1FE58F4300BD3E31 /* Info-macOS.plist */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		0E9838701FE58F8F00BD3E31 /* Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				0E9838901FE5926500BD3E31 /* README.md */,
-				0E98388F1FE5924800BD3E31 /* LICENSE */,
-			);
-			path = Metadata;
 			sourceTree = "<group>";
 		};
 		0E9838941FE5970C00BD3E31 /* Frameworks */ = {
