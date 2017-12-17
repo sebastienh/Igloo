@@ -160,9 +160,9 @@ extension Store {
                             lastPromise = self.dispatch(closure: closure, condition: nil, completion: completion)
                             executedPendingStoreClosuresIndexes.append(index)
                             return lastPromise!
-                            }.catch { error in
-                                debugPrint("Error: \(error)")
-                                reject(error)
+                        }.catch { error in
+                            debugPrint("Error: \(error)")
+                            reject(error)
                         }
                     }
                     else {
@@ -181,9 +181,9 @@ extension Store {
                 
                 lastPromise.then { () -> Void in
                     fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             } else {
                 
