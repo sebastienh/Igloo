@@ -1,4 +1,4 @@
-#  IglooKit
+#  Igloo Framework
 
 ## Description
 
