@@ -27,22 +27,22 @@
 		0E9838881FE590A900BD3E31 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838761FE590A300BD3E31 /* Reducer.swift */; };
 		0E9838891FE590A900BD3E31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838721FE590A200BD3E31 /* State.swift */; };
 		0E98388A1FE590A900BD3E31 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838741FE590A200BD3E31 /* Store.swift */; };
-		0E98388B1FE5911000BD3E31 /* IglooKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* IglooKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E98388C1FE5911100BD3E31 /* IglooKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* IglooKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E98388D1FE5911100BD3E31 /* IglooKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* IglooKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E98388E1FE5911200BD3E31 /* IglooKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* IglooKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E98388B1FE5911000BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E98388C1FE5911100BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E98388D1FE5911100BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E98388E1FE5911200BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E9838961FE5970D00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838951FE5970D00BD3E31 /* PromiseKit.framework */; };
 		0E9838981FE5972E00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838971FE5972E00BD3E31 /* PromiseKit.framework */; };
 		0E98389A1FE5973B00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838991FE5973B00BD3E31 /* PromiseKit.framework */; };
 		0E98389C1FE5974A00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98389B1FE5974A00BD3E31 /* PromiseKit.framework */; };
-		0E9838DF1FE5AA0600BD3E31 /* IglooKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98383F1FE58EFE00BD3E31 /* IglooKit.framework */; };
-		0E9838E61FE5AA1C00BD3E31 /* IglooKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooKitTests.swift */; };
+		0E9838DF1FE5AA0600BD3E31 /* Igloo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98383F1FE58EFE00BD3E31 /* Igloo.framework */; };
+		0E9838E61FE5AA1C00BD3E31 /* IglooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooTests.swift */; };
 		0E9838E81FE5AA9D00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838951FE5970D00BD3E31 /* PromiseKit.framework */; };
-		0E9838F21FE5AB6300BD3E31 /* IglooKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98385A1FE58F2D00BD3E31 /* IglooKit.framework */; };
+		0E9838F21FE5AB6300BD3E31 /* Igloo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98385A1FE58F2D00BD3E31 /* Igloo.framework */; };
 		0E9838F91FE5AB9A00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838991FE5973B00BD3E31 /* PromiseKit.framework */; };
-		0E9839031FE5ABBE00BD3E31 /* IglooKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838671FE58F4300BD3E31 /* IglooKit.framework */; };
-		0E98390A1FE5AC3600BD3E31 /* IglooKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooKitTests.swift */; };
-		0E98390B1FE5AC3700BD3E31 /* IglooKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooKitTests.swift */; };
+		0E9839031FE5ABBE00BD3E31 /* Igloo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838671FE58F4300BD3E31 /* Igloo.framework */; };
+		0E98390A1FE5AC3600BD3E31 /* IglooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooTests.swift */; };
+		0E98390B1FE5AC3700BD3E31 /* IglooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooTests.swift */; };
 		0E98390C1FE5AC8400BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98389B1FE5974A00BD3E31 /* PromiseKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,15 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E98383F1FE58EFE00BD3E31 /* IglooKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IglooKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E98383F1FE58EFE00BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838431FE58EFE00BD3E31 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		0E98384D1FE58F1800BD3E31 /* IglooKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IglooKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E98384D1FE58F1800BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838501FE58F1800BD3E31 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
-		0E98385A1FE58F2D00BD3E31 /* IglooKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IglooKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E98385A1FE58F2D00BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E98385D1FE58F2D00BD3E31 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		0E9838671FE58F4300BD3E31 /* IglooKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IglooKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9838671FE58F4300BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E98386A1FE58F4300BD3E31 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
-		0E9838711FE58FB500BD3E31 /* IglooKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IglooKit.h; sourceTree = "<group>"; };
+		0E9838711FE58FB500BD3E31 /* Igloo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Igloo.h; sourceTree = "<group>"; };
 		0E9838721FE590A200BD3E31 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		0E9838731FE590A200BD3E31 /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		0E9838741FE590A200BD3E31 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -95,10 +95,10 @@
 		0E9838A91FE59C6900BD3E31 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		0E9838B81FE59CFE00BD3E31 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		0E9838C71FE59D1A00BD3E31 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
-		0E9838CF1FE5A18700BD3E31 /* IglooKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IglooKitTests.swift; sourceTree = "<group>"; };
-		0E9838DA1FE5AA0600BD3E31 /* IglooKitTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooKitTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E9838ED1FE5AB6300BD3E31 /* IglooKitTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooKitTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E9838FE1FE5ABBD00BD3E31 /* IglooKitTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooKitTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9838CF1FE5A18700BD3E31 /* IglooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IglooTests.swift; sourceTree = "<group>"; };
+		0E9838DA1FE5AA0600BD3E31 /* IglooTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9838ED1FE5AB6300BD3E31 /* IglooTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9838FE1FE5ABBD00BD3E31 /* IglooTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9838E81FE5AA9D00BD3E31 /* PromiseKit.framework in Frameworks */,
-				0E9838DF1FE5AA0600BD3E31 /* IglooKit.framework in Frameworks */,
+				0E9838DF1FE5AA0600BD3E31 /* Igloo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9838F91FE5AB9A00BD3E31 /* PromiseKit.framework in Frameworks */,
-				0E9838F21FE5AB6300BD3E31 /* IglooKit.framework in Frameworks */,
+				0E9838F21FE5AB6300BD3E31 /* Igloo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E98390C1FE5AC8400BD3E31 /* PromiseKit.framework in Frameworks */,
-				0E9839031FE5ABBE00BD3E31 /* IglooKit.framework in Frameworks */,
+				0E9839031FE5ABBE00BD3E31 /* Igloo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +171,7 @@
 				0E9838901FE5926500BD3E31 /* README.md */,
 				0E98388F1FE5924800BD3E31 /* LICENSE */,
 				0E98386F1FE58F8700BD3E31 /* Sources */,
-				0E9838CE1FE5A06E00BD3E31 /* IglooKitTests */,
+				0E9838CE1FE5A06E00BD3E31 /* IglooTests */,
 				0E9838401FE58EFE00BD3E31 /* Products */,
 				0E9838941FE5970C00BD3E31 /* Frameworks */,
 			);
@@ -180,13 +180,13 @@
 		0E9838401FE58EFE00BD3E31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E98383F1FE58EFE00BD3E31 /* IglooKit.framework */,
-				0E98384D1FE58F1800BD3E31 /* IglooKit.framework */,
-				0E98385A1FE58F2D00BD3E31 /* IglooKit.framework */,
-				0E9838671FE58F4300BD3E31 /* IglooKit.framework */,
-				0E9838DA1FE5AA0600BD3E31 /* IglooKitTests-iOS.xctest */,
-				0E9838ED1FE5AB6300BD3E31 /* IglooKitTests-tvOS.xctest */,
-				0E9838FE1FE5ABBD00BD3E31 /* IglooKitTests-macOS.xctest */,
+				0E98383F1FE58EFE00BD3E31 /* Igloo.framework */,
+				0E98384D1FE58F1800BD3E31 /* Igloo.framework */,
+				0E98385A1FE58F2D00BD3E31 /* Igloo.framework */,
+				0E9838671FE58F4300BD3E31 /* Igloo.framework */,
+				0E9838DA1FE5AA0600BD3E31 /* IglooTests-iOS.xctest */,
+				0E9838ED1FE5AB6300BD3E31 /* IglooTests-tvOS.xctest */,
+				0E9838FE1FE5ABBD00BD3E31 /* IglooTests-macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,16 +194,13 @@
 		0E98386F1FE58F8700BD3E31 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0E9838711FE58FB500BD3E31 /* IglooKit.h */,
+				0E9838711FE58FB500BD3E31 /* Igloo.h */,
 				0E9838751FE590A200BD3E31 /* ActionType.swift */,
 				0E9838731FE590A200BD3E31 /* Dispatcher.swift */,
 				0E9838761FE590A300BD3E31 /* Reducer.swift */,
 				0E9838721FE590A200BD3E31 /* State.swift */,
 				0E9838741FE590A200BD3E31 /* Store.swift */,
-				0E9838431FE58EFE00BD3E31 /* Info-iOS.plist */,
-				0E9838501FE58F1800BD3E31 /* Info-watchOS.plist */,
-				0E98385D1FE58F2D00BD3E31 /* Info-tvOS.plist */,
-				0E98386A1FE58F4300BD3E31 /* Info-macOS.plist */,
+				0EAC391E1FE5ED3D00FB7AD1 /* Infos.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -219,15 +216,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0E9838CE1FE5A06E00BD3E31 /* IglooKitTests */ = {
+		0E9838CE1FE5A06E00BD3E31 /* IglooTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E9838CF1FE5A18700BD3E31 /* IglooKitTests.swift */,
+				0E9838CF1FE5A18700BD3E31 /* IglooTests.swift */,
 				0E9838A91FE59C6900BD3E31 /* Info-iOS.plist */,
 				0E9838B81FE59CFE00BD3E31 /* Info-tvOS.plist */,
 				0E9838C71FE59D1A00BD3E31 /* Info-macOS.plist */,
 			);
-			path = IglooKitTests;
+			path = IglooTests;
+			sourceTree = "<group>";
+		};
+		0EAC391E1FE5ED3D00FB7AD1 /* Infos.plist */ = {
+			isa = PBXGroup;
+			children = (
+				0E9838431FE58EFE00BD3E31 /* Info-iOS.plist */,
+				0E9838501FE58F1800BD3E31 /* Info-watchOS.plist */,
+				0E98385D1FE58F2D00BD3E31 /* Info-tvOS.plist */,
+				0E98386A1FE58F4300BD3E31 /* Info-macOS.plist */,
+			);
+			name = Infos.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +245,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98388B1FE5911000BD3E31 /* IglooKit.h in Headers */,
+				0E98388B1FE5911000BD3E31 /* Igloo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +253,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98388C1FE5911100BD3E31 /* IglooKit.h in Headers */,
+				0E98388C1FE5911100BD3E31 /* Igloo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +261,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98388D1FE5911100BD3E31 /* IglooKit.h in Headers */,
+				0E98388D1FE5911100BD3E31 /* Igloo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,16 +269,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98388E1FE5911200BD3E31 /* IglooKit.h in Headers */,
+				0E98388E1FE5911200BD3E31 /* Igloo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0E98383E1FE58EFE00BD3E31 /* IglooKit-iOS */ = {
+		0E98383E1FE58EFE00BD3E31 /* Igloo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9838451FE58EFE00BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-iOS" */;
+			buildConfigurationList = 0E9838451FE58EFE00BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-iOS" */;
 			buildPhases = (
 				0E98383A1FE58EFE00BD3E31 /* Sources */,
 				0E98383B1FE58EFE00BD3E31 /* Frameworks */,
@@ -282,14 +290,14 @@
 			);
 			dependencies = (
 			);
-			name = "IglooKit-iOS";
+			name = "Igloo-iOS";
 			productName = "IglooKit-iOS";
-			productReference = 0E98383F1FE58EFE00BD3E31 /* IglooKit.framework */;
+			productReference = 0E98383F1FE58EFE00BD3E31 /* Igloo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E98384C1FE58F1800BD3E31 /* IglooKit-watchOS */ = {
+		0E98384C1FE58F1800BD3E31 /* Igloo-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9838521FE58F1800BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-watchOS" */;
+			buildConfigurationList = 0E9838521FE58F1800BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-watchOS" */;
 			buildPhases = (
 				0E9838481FE58F1800BD3E31 /* Sources */,
 				0E9838491FE58F1800BD3E31 /* Frameworks */,
@@ -301,14 +309,14 @@
 			);
 			dependencies = (
 			);
-			name = "IglooKit-watchOS";
+			name = "Igloo-watchOS";
 			productName = "IglooKit-watchOS";
-			productReference = 0E98384D1FE58F1800BD3E31 /* IglooKit.framework */;
+			productReference = 0E98384D1FE58F1800BD3E31 /* Igloo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E9838591FE58F2D00BD3E31 /* IglooKit-tvOS */ = {
+		0E9838591FE58F2D00BD3E31 /* Igloo-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E98385F1FE58F2D00BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-tvOS" */;
+			buildConfigurationList = 0E98385F1FE58F2D00BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-tvOS" */;
 			buildPhases = (
 				0E9838551FE58F2D00BD3E31 /* Sources */,
 				0E9838561FE58F2D00BD3E31 /* Frameworks */,
@@ -320,14 +328,14 @@
 			);
 			dependencies = (
 			);
-			name = "IglooKit-tvOS";
+			name = "Igloo-tvOS";
 			productName = "IglooKit-tvOS";
-			productReference = 0E98385A1FE58F2D00BD3E31 /* IglooKit.framework */;
+			productReference = 0E98385A1FE58F2D00BD3E31 /* Igloo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E9838661FE58F4300BD3E31 /* IglooKit-macOS */ = {
+		0E9838661FE58F4300BD3E31 /* Igloo-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E98386C1FE58F4300BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-macOS" */;
+			buildConfigurationList = 0E98386C1FE58F4300BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-macOS" */;
 			buildPhases = (
 				0E9838621FE58F4300BD3E31 /* Sources */,
 				0E9838631FE58F4300BD3E31 /* Frameworks */,
@@ -339,14 +347,14 @@
 			);
 			dependencies = (
 			);
-			name = "IglooKit-macOS";
+			name = "Igloo-macOS";
 			productName = "IglooKit-macOS";
-			productReference = 0E9838671FE58F4300BD3E31 /* IglooKit.framework */;
+			productReference = 0E9838671FE58F4300BD3E31 /* Igloo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0E9838D91FE5AA0600BD3E31 /* IglooKitTests-iOS */ = {
+		0E9838D91FE5AA0600BD3E31 /* IglooTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9838E21FE5AA0600BD3E31 /* Build configuration list for PBXNativeTarget "IglooKitTests-iOS" */;
+			buildConfigurationList = 0E9838E21FE5AA0600BD3E31 /* Build configuration list for PBXNativeTarget "IglooTests-iOS" */;
 			buildPhases = (
 				0E9838D61FE5AA0600BD3E31 /* Sources */,
 				0E9838D71FE5AA0600BD3E31 /* Frameworks */,
@@ -358,14 +366,14 @@
 			dependencies = (
 				0E9838E11FE5AA0600BD3E31 /* PBXTargetDependency */,
 			);
-			name = "IglooKitTests-iOS";
+			name = "IglooTests-iOS";
 			productName = "IglooKitTests-iOS";
-			productReference = 0E9838DA1FE5AA0600BD3E31 /* IglooKitTests-iOS.xctest */;
+			productReference = 0E9838DA1FE5AA0600BD3E31 /* IglooTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0E9838EC1FE5AB6300BD3E31 /* IglooKitTests-tvOS */ = {
+		0E9838EC1FE5AB6300BD3E31 /* IglooTests-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9838F51FE5AB6300BD3E31 /* Build configuration list for PBXNativeTarget "IglooKitTests-tvOS" */;
+			buildConfigurationList = 0E9838F51FE5AB6300BD3E31 /* Build configuration list for PBXNativeTarget "IglooTests-tvOS" */;
 			buildPhases = (
 				0E9838E91FE5AB6300BD3E31 /* Sources */,
 				0E9838EA1FE5AB6300BD3E31 /* Frameworks */,
@@ -377,14 +385,14 @@
 			dependencies = (
 				0E9838F41FE5AB6300BD3E31 /* PBXTargetDependency */,
 			);
-			name = "IglooKitTests-tvOS";
+			name = "IglooTests-tvOS";
 			productName = "IglooKitTests-tvOS";
-			productReference = 0E9838ED1FE5AB6300BD3E31 /* IglooKitTests-tvOS.xctest */;
+			productReference = 0E9838ED1FE5AB6300BD3E31 /* IglooTests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0E9838FD1FE5ABBD00BD3E31 /* IglooKitTests-macOS */ = {
+		0E9838FD1FE5ABBD00BD3E31 /* IglooTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9839061FE5ABBE00BD3E31 /* Build configuration list for PBXNativeTarget "IglooKitTests-macOS" */;
+			buildConfigurationList = 0E9839061FE5ABBE00BD3E31 /* Build configuration list for PBXNativeTarget "IglooTests-macOS" */;
 			buildPhases = (
 				0E9838FA1FE5ABBD00BD3E31 /* Sources */,
 				0E9838FB1FE5ABBD00BD3E31 /* Frameworks */,
@@ -396,9 +404,9 @@
 			dependencies = (
 				0E9839051FE5ABBE00BD3E31 /* PBXTargetDependency */,
 			);
-			name = "IglooKitTests-macOS";
+			name = "IglooTests-macOS";
 			productName = "IglooKitTests-macOS";
-			productReference = 0E9838FE1FE5ABBD00BD3E31 /* IglooKitTests-macOS.xctest */;
+			productReference = 0E9838FE1FE5ABBD00BD3E31 /* IglooTests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -441,7 +449,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0E9838371FE58EB500BD3E31 /* Build configuration list for PBXProject "IglooKit" */;
+			buildConfigurationList = 0E9838371FE58EB500BD3E31 /* Build configuration list for PBXProject "Igloo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -453,13 +461,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0E98383E1FE58EFE00BD3E31 /* IglooKit-iOS */,
-				0E98384C1FE58F1800BD3E31 /* IglooKit-watchOS */,
-				0E9838591FE58F2D00BD3E31 /* IglooKit-tvOS */,
-				0E9838661FE58F4300BD3E31 /* IglooKit-macOS */,
-				0E9838D91FE5AA0600BD3E31 /* IglooKitTests-iOS */,
-				0E9838EC1FE5AB6300BD3E31 /* IglooKitTests-tvOS */,
-				0E9838FD1FE5ABBD00BD3E31 /* IglooKitTests-macOS */,
+				0E98383E1FE58EFE00BD3E31 /* Igloo-iOS */,
+				0E98384C1FE58F1800BD3E31 /* Igloo-watchOS */,
+				0E9838591FE58F2D00BD3E31 /* Igloo-tvOS */,
+				0E9838661FE58F4300BD3E31 /* Igloo-macOS */,
+				0E9838D91FE5AA0600BD3E31 /* IglooTests-iOS */,
+				0E9838EC1FE5AB6300BD3E31 /* IglooTests-tvOS */,
+				0E9838FD1FE5ABBD00BD3E31 /* IglooTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -677,7 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E9838E61FE5AA1C00BD3E31 /* IglooKitTests.swift in Sources */,
+				0E9838E61FE5AA1C00BD3E31 /* IglooTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,7 +693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98390B1FE5AC3700BD3E31 /* IglooKitTests.swift in Sources */,
+				0E98390B1FE5AC3700BD3E31 /* IglooTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98390A1FE5AC3600BD3E31 /* IglooKitTests.swift in Sources */,
+				0E98390A1FE5AC3600BD3E31 /* IglooTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,17 +710,17 @@
 /* Begin PBXTargetDependency section */
 		0E9838E11FE5AA0600BD3E31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E98383E1FE58EFE00BD3E31 /* IglooKit-iOS */;
+			target = 0E98383E1FE58EFE00BD3E31 /* Igloo-iOS */;
 			targetProxy = 0E9838E01FE5AA0600BD3E31 /* PBXContainerItemProxy */;
 		};
 		0E9838F41FE5AB6300BD3E31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E9838591FE58F2D00BD3E31 /* IglooKit-tvOS */;
+			target = 0E9838591FE58F2D00BD3E31 /* Igloo-tvOS */;
 			targetProxy = 0E9838F31FE5AB6300BD3E31 /* PBXContainerItemProxy */;
 		};
 		0E9839051FE5ABBE00BD3E31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0E9838661FE58F4300BD3E31 /* IglooKit-macOS */;
+			target = 0E9838661FE58F4300BD3E31 /* Igloo-macOS */;
 			targetProxy = 0E9839041FE5ABBE00BD3E31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -801,8 +809,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-iOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-iOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -872,8 +880,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-iOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-iOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -950,8 +958,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-watchOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-watchOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1022,8 +1030,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-watchOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-watchOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1100,8 +1108,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-tvOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-tvOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1171,8 +1179,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-tvOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-tvOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1252,8 +1260,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-macOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-macOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1324,8 +1332,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKit-macOS";
-				PRODUCT_NAME = IglooKit;
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-macOS";
+				PRODUCT_NAME = Igloo;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1389,12 +1397,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "IglooKitTests/Info-iOS.plist";
+				INFOPLIST_FILE = "IglooTests/Info-iOS.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKitTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1452,11 +1460,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "IglooKitTests/Info-iOS.plist";
+				INFOPLIST_FILE = "IglooTests/Info-iOS.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKitTests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1519,11 +1527,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "IglooKitTests-tvOS/Info.plist";
+				INFOPLIST_FILE = "IglooTests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKitTests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1581,10 +1589,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "IglooKitTests-tvOS/Info.plist";
+				INFOPLIST_FILE = "IglooTests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKitTests-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooTests-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1650,12 +1658,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "IglooKitTests/Info-macOS.plist";
+				INFOPLIST_FILE = "IglooTests/Info-macOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKitTests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1713,11 +1721,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "IglooKitTests/Info-macOS.plist";
+				INFOPLIST_FILE = "IglooTests/Info-macOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooKitTests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.IglooTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1728,7 +1736,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E9838371FE58EB500BD3E31 /* Build configuration list for PBXProject "IglooKit" */ = {
+		0E9838371FE58EB500BD3E31 /* Build configuration list for PBXProject "Igloo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9838381FE58EB500BD3E31 /* Debug */,
@@ -1737,7 +1745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E9838451FE58EFE00BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-iOS" */ = {
+		0E9838451FE58EFE00BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9838461FE58EFE00BD3E31 /* Debug */,
@@ -1746,7 +1754,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E9838521FE58F1800BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-watchOS" */ = {
+		0E9838521FE58F1800BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9838531FE58F1800BD3E31 /* Debug */,
@@ -1755,7 +1763,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E98385F1FE58F2D00BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-tvOS" */ = {
+		0E98385F1FE58F2D00BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9838601FE58F2D00BD3E31 /* Debug */,
@@ -1764,7 +1772,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E98386C1FE58F4300BD3E31 /* Build configuration list for PBXNativeTarget "IglooKit-macOS" */ = {
+		0E98386C1FE58F4300BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E98386D1FE58F4300BD3E31 /* Debug */,
@@ -1773,7 +1781,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E9838E21FE5AA0600BD3E31 /* Build configuration list for PBXNativeTarget "IglooKitTests-iOS" */ = {
+		0E9838E21FE5AA0600BD3E31 /* Build configuration list for PBXNativeTarget "IglooTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9838E31FE5AA0600BD3E31 /* Debug */,
@@ -1782,7 +1790,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E9838F51FE5AB6300BD3E31 /* Build configuration list for PBXNativeTarget "IglooKitTests-tvOS" */ = {
+		0E9838F51FE5AB6300BD3E31 /* Build configuration list for PBXNativeTarget "IglooTests-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9838F61FE5AB6300BD3E31 /* Debug */,
@@ -1791,7 +1799,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E9839061FE5ABBE00BD3E31 /* Build configuration list for PBXNativeTarget "IglooKitTests-macOS" */ = {
+		0E9839061FE5ABBE00BD3E31 /* Build configuration list for PBXNativeTarget "IglooTests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E9839071FE5ABBE00BD3E31 /* Debug */,
