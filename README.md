@@ -15,7 +15,7 @@ General usage rules:
     Explanation: This way it is easier to change the concurrent flow in the reducer and spot concurrency errors also, since 
     it all appends in one method. The roles of the helper methods should be to make the flow clearer. 
 
-
+```
     // TODO: if we want to garantee the order of the operations in the
     // pending tasks we should make it a Sequence. An iterate throw it using
     // an iterator for exectuing the pending taks. an integer could be used
@@ -35,4 +35,4 @@ General usage rules:
     // of different importances.
     // Really important: we should support the try to run when arrive but do not keep it. 
     // We should not accumulate too much pending tasks.
-
+```
