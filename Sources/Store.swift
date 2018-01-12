@@ -49,24 +49,24 @@ extension Store {
                         
                         firstly {
                             closure(self)
-                            }.then {
-                                completion(self)
-                            }.then {
-                                fulfill(())
-                            }.catch { error in
-                                debugPrint("Error: \(error)")
-                                reject(error)
+                        }.then {
+                            completion(self)
+                        }.then {
+                            fulfill(())
+                        }.catch { error in
+                            debugPrint("Error: \(error)")
+                            reject(error)
                         }
                     }
                     else {
                         
                         firstly {
                             closure(self)
-                            }.then {
-                                fulfill(())
-                            }.catch { error in
-                                debugPrint("Error: \(error)")
-                                reject(error)
+                        }.then {
+                            fulfill(())
+                        }.catch { error in
+                            debugPrint("Error: \(error)")
+                            reject(error)
                         }
                     }
                     
@@ -80,24 +80,24 @@ extension Store {
                     
                     firstly {
                         closure(self)
-                        }.then {
-                            completion(self)
-                        }.then {
-                            fulfill(())
-                        }.catch { error in
-                            debugPrint("Error: \(error)")
-                            reject(error)
+                    }.then {
+                        completion(self)
+                    }.then {
+                        fulfill(())
+                    }.catch { error in
+                        debugPrint("Error: \(error)")
+                        reject(error)
                     }
                 }
                 else {
                     
                     firstly {
                         closure(self)
-                        }.then {
-                            fulfill(())
-                        }.catch { error in
-                            debugPrint("Error: \(error)")
-                            reject(error)
+                    }.then {
+                        fulfill(())
+                    }.catch { error in
+                        debugPrint("Error: \(error)")
+                        reject(error)
                     }
                 }
             }
@@ -115,11 +115,11 @@ extension Store {
                     
                     firstly {
                         reducer.reduce(store: self, action: action, completion: completion)
-                        }.then {
-                            fulfill(())
-                        }.catch { error in
-                            debugPrint("Error: \(error)")
-                            reject(error)
+                    }.then {
+                        fulfill(())
+                    }.catch { error in
+                        debugPrint("Error: \(error)")
+                        reject(error)
                     }
                 }
                 else {
@@ -130,11 +130,11 @@ extension Store {
                 
                 firstly {
                     reducer.reduce(store: self, action: action, completion: completion)
-                    }.then {
-                        fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.then {
+                    fulfill(())
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             }
         }
@@ -211,9 +211,9 @@ extension Store {
                             lastPromise = self.dispatch(action: action, condition: nil, completion: completion)
                             executedPendingStoreActionsIndexes.append(index)
                             return lastPromise!
-                            }.catch { error in
-                                debugPrint("Error: \(error)")
-                                reject(error)
+                        }.catch { error in
+                            debugPrint("Error: \(error)")
+                            reject(error)
                         }
                     }
                     else {
@@ -225,16 +225,13 @@ extension Store {
             
             if let lastPromise = lastPromise {
                 
-                // FIXME: need to understand why we an not put this in the then...
-                // we don't really care but the fact is we like to understand why things
-                // are the way they are.
                 self.deleteExecutedPendingStoreActions(indexes: executedPendingStoreActionsIndexes)
                 
                 lastPromise.then { () -> Void in
                     fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             } else {
                 
