@@ -19,7 +19,9 @@ public protocol Store: class {
     
     var pendingStoreActions: [(((Self) -> Bool), ActionType, ((Self) -> Promise<Void>)?)] { get set }
     
-    func read<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
+    func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
+    
+    func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
     
     func dispatch(closure: @escaping (Self) -> Promise<Void>, condition: ((Self) -> Bool)?, completion: ((Self) -> Promise<Void>)?) -> Promise<Void>
     
@@ -32,9 +34,14 @@ public protocol Store: class {
 
 extension Store {
     
-    public func read<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
+    public func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
         
-        return reducer.read(store: self, in: dispatchQueue, with: closure)
+        return reducer.readSync(store: self, in: dispatchQueue, with: closure)
+    }
+    
+    public func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
+        
+        return reducer.readAsync(store: self, in: dispatchQueue, with: closure)
     }
     
     public func dispatch(closure: @escaping (Self) -> Promise<Void>, condition: ((Self) -> Bool)? = nil, completion: ((Self) -> Promise<Void>)? = nil) -> Promise<Void> {

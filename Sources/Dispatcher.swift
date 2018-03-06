@@ -14,7 +14,10 @@ public protocol Dispatcher {
     var state: State { get }
     
     @discardableResult
-    func read<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
+    func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
+    
+    @discardableResult
+    func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
     
     /// Dispatch the action in the right store
     /// we should not put the completion in the pending tasks. They should
@@ -35,9 +38,15 @@ public protocol Dispatcher {
 extension Dispatcher {
     
     @discardableResult
-    public func read<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
+    public func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
         
-        return store.read(in: dispatchQueue, with: closure)
+        return store.readSync(in: dispatchQueue, with: closure)
+    }
+    
+    @discardableResult
+    public func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
+        
+        return store.readAsync(in: dispatchQueue, with: closure)
     }
     
     /// Dispatch the action in the right store

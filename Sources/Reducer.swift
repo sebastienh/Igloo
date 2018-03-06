@@ -11,7 +11,9 @@ import PromiseKit
 
 public protocol Reducer {
     
-    func read<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
+    func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
+    
+    func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
     
     func reduce<S: Store>(store: S, action: ActionType, completion closure: ((S) -> Promise<Void>)?) -> Promise<Void>
     
@@ -20,7 +22,25 @@ public protocol Reducer {
 
 extension Reducer {
     
-    public func read<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
+    public func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
+        
+        return Promise<R> { fulfill, reject in
+            
+            // this is the async read
+            dispatchQueue.sync {
+                
+                do {
+                    let r: R = try closure(store)
+                    fulfill(r)
+                }
+                catch let error {
+                    reject(error)
+                }
+            }
+        }
+    }
+    
+    public func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
         
         return Promise<R> { fulfill, reject in
             
