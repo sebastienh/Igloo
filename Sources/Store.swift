@@ -19,8 +19,10 @@ public protocol Store: class {
     
     var pendingStoreActions: [(((Self) -> Bool), ActionType, ((Self, ActionResult?) -> Promise<ActionResult?>)?)] { get set }
     
+    @discardableResult
     func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
     
+    @discardableResult
     func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
     
     func dispatch(closure: @escaping (Self) -> Promise<ActionResult?>, condition: ((Self) -> Bool)?, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
@@ -34,11 +36,13 @@ public protocol Store: class {
 
 extension Store {
     
+    @discardableResult
     public func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
         
         return reducer.readSync(store: self, in: dispatchQueue, with: closure)
     }
     
+    @discardableResult
     public func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
         
         return reducer.readAsync(store: self, in: dispatchQueue, with: closure)
@@ -80,6 +84,7 @@ extension Store {
                 }
                 else {
                     pendingStoreClosures.append((condition, closure, completion))
+                    fulfill(nil)
                 }
             }
             else {
@@ -131,6 +136,7 @@ extension Store {
                 }
                 else {
                     pendingStoreActions.append((condition, action, completion))
+                    fulfill(nil)
                 }
             }
             else {
@@ -248,7 +254,7 @@ extension Store {
         }
     }
     
-    fileprivate func deleteExecutedPendingStoreClosures(indexes: [Int]) {
+    private func deleteExecutedPendingStoreClosures(indexes: [Int]) {
         
         var _reversedIndexes: [Int] = indexes.reversed()
         var removedValues = 0
@@ -262,7 +268,7 @@ extension Store {
         }
     }
     
-    fileprivate func deleteExecutedPendingStoreActions(indexes: [Int]) {
+    private func deleteExecutedPendingStoreActions(indexes: [Int]) {
         
         var _reversedIndexes: [Int] = indexes.reversed()
         var removedValues = 0
