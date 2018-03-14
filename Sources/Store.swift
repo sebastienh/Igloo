@@ -15,17 +15,17 @@ public protocol Store: class {
     
     var reducer: ReducerType { get }
     
-    var pendingStoreClosures: [(((Self) -> Bool), (Self) -> Promise<Void>, ((Self) -> Promise<Void>)?)] { get set }
+    var pendingStoreClosures: [(((Self) -> Bool), (Self) -> Promise<ActionResult?>, ((Self, ActionResult?) -> Promise<ActionResult?>)?)] { get set }
     
-    var pendingStoreActions: [(((Self) -> Bool), ActionType, ((Self) -> Promise<Void>)?)] { get set }
+    var pendingStoreActions: [(((Self) -> Bool), ActionType, ((Self, ActionResult?) -> Promise<ActionResult?>)?)] { get set }
     
     func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
     
     func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
     
-    func dispatch(closure: @escaping (Self) -> Promise<Void>, condition: ((Self) -> Bool)?, completion: ((Self) -> Promise<Void>)?) -> Promise<Void>
+    func dispatch(closure: @escaping (Self) -> Promise<ActionResult?>, condition: ((Self) -> Bool)?, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
     
-    func dispatch(action: ActionType, condition: ((Self) -> Bool)?, completion: ((Self) -> Promise<Void>)?) -> Promise<Void>
+    func dispatch(action: ActionType, condition: ((Self) -> Bool)?, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
     
     func executeExecutablePendingStoreClosures() -> Promise<Void>
     
@@ -44,9 +44,9 @@ extension Store {
         return reducer.readAsync(store: self, in: dispatchQueue, with: closure)
     }
     
-    public func dispatch(closure: @escaping (Self) -> Promise<Void>, condition: ((Self) -> Bool)? = nil, completion: ((Self) -> Promise<Void>)? = nil) -> Promise<Void> {
+    public func dispatch(closure: @escaping (Self) -> Promise<ActionResult?>, condition: ((Self) -> Bool)? = nil, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
         
-        return Promise<Void> { fulfill, reject in
+        return Promise<ActionResult?> { fulfill, reject in
             
             if let condition = condition {
                 
@@ -56,10 +56,10 @@ extension Store {
                         
                         firstly {
                             closure(self)
-                        }.then {
-                            completion(self)
-                        }.then {
-                            fulfill(())
+                        }.then { closureResult -> Promise<ActionResult?> in
+                            completion(self, closureResult)
+                        }.then { completionResult -> Void in
+                            fulfill(completionResult)
                         }.catch { error in
                             debugPrint("Error: \(error)")
                             reject(error)
@@ -69,8 +69,8 @@ extension Store {
                         
                         firstly {
                             closure(self)
-                        }.then {
-                            fulfill(())
+                        }.then { closureResult -> Void in
+                            fulfill(closureResult)
                         }.catch { error in
                             debugPrint("Error: \(error)")
                             reject(error)
@@ -87,10 +87,10 @@ extension Store {
                     
                     firstly {
                         closure(self)
-                    }.then {
-                        completion(self)
-                    }.then {
-                        fulfill(())
+                    }.then { closureResult -> Promise<ActionResult?> in
+                        completion(self, closureResult)
+                    }.then { completionResult -> Void in
+                        fulfill(completionResult)
                     }.catch { error in
                         debugPrint("Error: \(error)")
                         reject(error)
@@ -100,8 +100,8 @@ extension Store {
                     
                     firstly {
                         closure(self)
-                    }.then {
-                        fulfill(())
+                    }.then { closureResult -> Void in
+                        fulfill(closureResult)
                     }.catch { error in
                         debugPrint("Error: \(error)")
                         reject(error)
@@ -112,9 +112,9 @@ extension Store {
     }
     
     @discardableResult
-    public func dispatch(action: ActionType, condition: ((Self) -> Bool)? = nil, completion: ((Self) -> Promise<Void>)? = nil) -> Promise<Void> {
+    public func dispatch(action: ActionType, condition: ((Self) -> Bool)? = nil, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
         
-        return Promise<Void> { fulfill, reject in
+        return Promise<ActionResult?> { fulfill, reject in
             
             if let condition = condition {
                 
@@ -122,8 +122,8 @@ extension Store {
                     
                     firstly {
                         reducer.reduce(store: self, action: action, completion: completion)
-                    }.then {
-                        fulfill(())
+                    }.then { actionResult -> Void in
+                        fulfill(actionResult)
                     }.catch { error in
                         debugPrint("Error: \(error)")
                         reject(error)
@@ -137,8 +137,8 @@ extension Store {
                 
                 firstly {
                     reducer.reduce(store: self, action: action, completion: completion)
-                }.then {
-                    fulfill(())
+                }.then { actionResult -> Void in
+                    fulfill(actionResult)
                 }.catch { error in
                     debugPrint("Error: \(error)")
                     reject(error)
@@ -154,7 +154,7 @@ extension Store {
         return Promise<Void> { fulfill, reject in
             
             var executedPendingStoreClosuresIndexes = [Int]()
-            var lastPromise: Promise<Void>? = nil
+            var lastPromise: Promise<ActionResult?>? = nil
             
             for (index, (condition, closure, completion)) in pendingStoreClosures.enumerated() {
                 
@@ -162,12 +162,12 @@ extension Store {
                     
                     if let _lastPromise = lastPromise {
                         
-                        _lastPromise.then { () -> Promise<Void> in
+                        _lastPromise.then { (_) -> Promise<ActionResult?> in
                             
                             lastPromise = self.dispatch(closure: closure, condition: nil, completion: completion)
                             executedPendingStoreClosuresIndexes.append(index)
                             return lastPromise!
-                        }.catch { error in
+                        }.catch { error -> Void in
                             debugPrint("Error: \(error)")
                             reject(error)
                         }
@@ -186,7 +186,7 @@ extension Store {
                 // are the way they are.
                 self.deleteExecutedPendingStoreClosures(indexes: executedPendingStoreClosuresIndexes)
                 
-                lastPromise.then { () -> Void in
+                lastPromise.then { (_) -> Void in
                     fulfill(())
                 }.catch { error in
                     debugPrint("Error: \(error)")
@@ -205,7 +205,7 @@ extension Store {
         return Promise<Void> { fulfill, reject in
             
             var executedPendingStoreActionsIndexes = [Int]()
-            var lastPromise: Promise<Void>? = nil
+            var lastPromise: Promise<ActionResult?>? = nil
             
             for (index, (condition, action, completion)) in pendingStoreActions.enumerated() {
                 
@@ -213,7 +213,7 @@ extension Store {
                     
                     if let _lastPromise = lastPromise {
                         
-                        _lastPromise.then { () -> Promise<Void> in
+                        _lastPromise.then { _  -> Promise<ActionResult?> in
                             
                             lastPromise = self.dispatch(action: action, condition: nil, completion: completion)
                             executedPendingStoreActionsIndexes.append(index)
@@ -234,7 +234,7 @@ extension Store {
                 
                 self.deleteExecutedPendingStoreActions(indexes: executedPendingStoreActionsIndexes)
                 
-                lastPromise.then { () -> Void in
+                lastPromise.then {_ -> Void in
                     fulfill(())
                 }.catch { error in
                     debugPrint("Error: \(error)")

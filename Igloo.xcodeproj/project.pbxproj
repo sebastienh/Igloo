@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E36F22D20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
+		0E36F22E20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
+		0E36F22F20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
+		0E36F23020586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
 		0E9838771FE590A300BD3E31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838721FE590A200BD3E31 /* State.swift */; };
 		0E9838781FE590A300BD3E31 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838731FE590A200BD3E31 /* Dispatcher.swift */; };
 		0E9838791FE590A300BD3E31 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838741FE590A200BD3E31 /* Store.swift */; };
@@ -71,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E36F22C20586009008C8451 /* ActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
 		0E98383F1FE58EFE00BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838431FE58EFE00BD3E31 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		0E98384D1FE58F1800BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +201,7 @@
 			children = (
 				0E9838711FE58FB500BD3E31 /* Igloo.h */,
 				0E9838751FE590A200BD3E31 /* ActionType.swift */,
+				0E36F22C20586009008C8451 /* ActionResult.swift */,
 				0E9838731FE590A200BD3E31 /* Dispatcher.swift */,
 				0E9838761FE590A300BD3E31 /* Reducer.swift */,
 				0E9838721FE590A200BD3E31 /* State.swift */,
@@ -641,6 +647,7 @@
 				0E98387A1FE590A300BD3E31 /* ActionType.swift in Sources */,
 				0E9838781FE590A300BD3E31 /* Dispatcher.swift in Sources */,
 				0E98387B1FE590A300BD3E31 /* Reducer.swift in Sources */,
+				0E36F22D20586009008C8451 /* ActionResult.swift in Sources */,
 				0E9838771FE590A300BD3E31 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +660,7 @@
 				0E98387D1FE590A800BD3E31 /* Dispatcher.swift in Sources */,
 				0E98387C1FE590A800BD3E31 /* ActionType.swift in Sources */,
 				0E98387E1FE590A800BD3E31 /* Reducer.swift in Sources */,
+				0E36F22E20586009008C8451 /* ActionResult.swift in Sources */,
 				0E98387F1FE590A800BD3E31 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +673,7 @@
 				0E9838821FE590A800BD3E31 /* Dispatcher.swift in Sources */,
 				0E9838811FE590A800BD3E31 /* ActionType.swift in Sources */,
 				0E9838831FE590A800BD3E31 /* Reducer.swift in Sources */,
+				0E36F22F20586009008C8451 /* ActionResult.swift in Sources */,
 				0E9838841FE590A900BD3E31 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +686,7 @@
 				0E9838871FE590A900BD3E31 /* Dispatcher.swift in Sources */,
 				0E9838861FE590A900BD3E31 /* ActionType.swift in Sources */,
 				0E9838881FE590A900BD3E31 /* Reducer.swift in Sources */,
+				0E36F23020586009008C8451 /* ActionResult.swift in Sources */,
 				0E9838891FE590A900BD3E31 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,9 +15,9 @@ public protocol Reducer {
     
     func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
     
-    func reduce<S: Store>(store: S, action: ActionType, completion closure: ((S) -> Promise<Void>)?) -> Promise<Void>
+    func reduce<S: Store>(store: S, action: ActionType, completion closure: ((S, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
     
-    func handle<S: Store>(store: S, action: ActionType) -> Promise<Void>
+    func handle<S: Store>(store: S, action: ActionType) -> Promise<ActionResult?>
 }
 
 extension Reducer {
@@ -59,32 +59,32 @@ extension Reducer {
     }
     
     // remove the completion from the reduce.... it should be done at the dispatcher level
-    public func reduce<S: Store>(store: S, action: ActionType, completion closure: ((S) -> Promise<Void>)? = nil) -> Promise<Void>  {
+    public func reduce<S: Store>(store: S, action: ActionType, completion closure: ((S, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?>  {
         
-        return Promise<Void> { fulfill, reject in
+        return Promise<ActionResult?> { fulfill, reject in
             
             if let closure = closure {
                 
                 firstly {
                     handle(store: store, action: action)
-                    }.then {
-                        closure(store)
-                    }.then {
-                        fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.then { actionResult -> Promise<ActionResult?> in
+                    closure(store, actionResult)
+                }.then { closureResult -> Void in
+                    fulfill(closureResult)
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             }
             else {
                 
                 firstly {
                     handle(store: store, action: action)
-                    }.then {
-                        fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.then { actionResult -> Void in
+                    fulfill(actionResult)
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             }
         }

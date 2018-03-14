@@ -25,10 +25,10 @@ public protocol Dispatcher {
     /// also has to be run at each time. So the code to handle the completion should
     /// really be written in each action.
     @discardableResult
-    func dispatch<S: Store>(store: S, action: ActionType, condition: ((S) -> Bool)?, completion: ((S) -> Promise<Void>)?) -> Promise<Void>
+    func dispatch<S: Store>(store: S, action: ActionType, condition: ((S) -> Bool)?, completion: ((S, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
     
     @discardableResult
-    func dispatch<S: Store>(store: S, closure: @escaping (S) -> Promise<Void>, condition: ((S) -> Bool)?, completion: ((S) -> Promise<Void>)?) -> Promise<Void>
+    func dispatch<S: Store>(store: S, closure: @escaping (S) -> Promise<ActionResult?>, condition: ((S) -> Bool)?, completion: ((S, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
     
     func pendingTasks<S: Store>(store: S) -> (() -> Promise<Void>)
     
@@ -55,9 +55,9 @@ extension Dispatcher {
     /// also has to be run at each time. So the code to handle the completion should
     /// really be written in each action.
     @discardableResult
-    public func dispatch<S: Store>(store: S, action: ActionType, condition: ((S) -> Bool)? = nil, completion: ((S) -> Promise<Void>)? = nil) -> Promise<Void> {
+    public func dispatch<S: Store>(store: S, action: ActionType, condition: ((S) -> Bool)? = nil, completion: ((S, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
         
-        return Promise<Void> { fulfill, reject in
+        return Promise<ActionResult?> { fulfill, reject in
             
             if let condition = condition {
                 
@@ -68,19 +68,25 @@ extension Dispatcher {
                         // because the pending task puts it inside the pending tasks, and execute
                         // this task first./
                         store.dispatch(action: action, condition: nil, completion: completion)
-                        }.then {
-                            self.pendingTasks(store: store)()
-                        }.then {
-                            fulfill(())
-                        }.catch { error in
-                            debugPrint("Error: \(error)")
-                            reject(error)
+                    }.then { actionResult -> Promise<ActionResult?> in
+                        return Promise<ActionResult?> { fulfill, reject in
+                            self.pendingTasks(store: store)().then {
+                                fulfill(actionResult)
+                            }.catch { error in
+                                reject(error)
+                            }
+                        }
+                    }.then { actionResult in
+                        fulfill(actionResult)
+                    }.catch { error in
+                        debugPrint("Error: \(error)")
+                        reject(error)
                     }
                 }
                 else {
                     // keep the pending task for later
                     store.pendingStoreActions.append((condition, action, completion))
-                    fulfill(())
+                    fulfill(nil)
                 }
             }
             else {
@@ -89,22 +95,28 @@ extension Dispatcher {
                 // the completion and finally all the pending tasks closures.
                 firstly {
                     store.dispatch(action: action, condition: nil, completion: completion)
-                    }.then {
-                        self.pendingTasks(store: store)()
-                    }.then {
-                        fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.then { actionResult -> Promise<ActionResult?> in
+                    return Promise<ActionResult?> { fulfill, reject in
+                        self.pendingTasks(store: store)().then {
+                            fulfill(actionResult)
+                        }.catch { error in
+                            reject(error)
+                        }
+                    }
+                }.then { actionResult -> Void in
+                    fulfill(actionResult)
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             }
         }
     }
     
     @discardableResult
-    public func dispatch<S: Store>(store: S, closure: @escaping (S) -> Promise<Void>, condition: ((S) -> Bool)?, completion: ((S) -> Promise<Void>)? = nil) -> Promise<Void> {
+    public func dispatch<S: Store>(store: S, closure: @escaping (S) -> Promise<ActionResult?>, condition: ((S) -> Bool)?, completion: ((S, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
         
-        return Promise<Void> { fulfill, reject in
+        return Promise<ActionResult?> { fulfill, reject in
             
             if let condition = condition {
                 
@@ -112,19 +124,25 @@ extension Dispatcher {
                     
                     firstly {
                         store.dispatch(closure: closure, condition: nil, completion: completion)
-                        }.then {
-                            self.pendingTasks(store: store)()
-                        }.then {
-                            fulfill(())
-                        }.catch { error in
-                            debugPrint("Error: \(error)")
-                            reject(error)
+                    }.then { actionResult -> Promise<ActionResult?> in
+                        return Promise<ActionResult?> { fulfill, reject in
+                            self.pendingTasks(store: store)().then {
+                                fulfill(actionResult)
+                            }.catch { error in
+                                reject(error)
+                            }
+                        }
+                    }.then { actionResult in
+                        fulfill(actionResult)
+                    }.catch { error in
+                        debugPrint("Error: \(error)")
+                        reject(error)
                     }
                 }
                 else {
                     // keep the pending task for later
                     store.pendingStoreClosures.append((condition, closure, completion))
-                    fulfill(())
+                    fulfill(nil)
                 }
             }
             else {
@@ -133,13 +151,19 @@ extension Dispatcher {
                 // the completion and finally all the pending tasks closures.
                 firstly {
                     store.dispatch(closure: closure, condition: nil, completion: completion)
-                    }.then {
-                        self.pendingTasks(store: store)()
-                    }.then {
-                        fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.then { actionResult -> Promise<ActionResult?> in
+                    return Promise<ActionResult?> { fulfill, reject in
+                        self.pendingTasks(store: store)().then {
+                            fulfill(actionResult)
+                        }.catch { error in
+                            reject(error)
+                        }
+                    }
+                }.then { actionResult in
+                    fulfill(actionResult)
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             }
         }
@@ -155,13 +179,13 @@ extension Dispatcher {
                 
                 firstly {
                     store.executeExecutablePendingStoreClosures()
-                    }.then {
-                        store.executeExecutablePendingStoreActions()
-                    }.then {
-                        fulfill(())
-                    }.catch { error in
-                        debugPrint("Error: \(error)")
-                        reject(error)
+                }.then {
+                    store.executeExecutablePendingStoreActions()
+                }.then {
+                    fulfill(())
+                }.catch { error in
+                    debugPrint("Error: \(error)")
+                    reject(error)
                 }
             }
         }
