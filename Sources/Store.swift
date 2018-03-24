@@ -16,68 +16,55 @@ public protocol Store: class {
     var reducer: ReducerType { get }
     
     @discardableResult
-    func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
+    func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) throws -> R
     
     @discardableResult
-    func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R>
+    func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) -> Promise<R>
     
-    func dispatch(closure: @escaping (Self) -> Promise<ActionResult?>, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
+    func async(closure: @escaping () -> Promise<ActionResult?>) -> Promise<ActionResult?>
     
-    func dispatch(action: ActionType, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
+    func async(action: AsyncAction) -> Promise<ActionResult?>
+    
+    func sync(action: SyncAction) -> ActionResult?
 }
 
 extension Store {
     
     @discardableResult
-    public func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
+    public func readSync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) throws -> R {
         
-        return reducer.readSync(store: self, in: dispatchQueue, with: closure)
+        return try reducer.readSync(store: self, in: dispatchQueue, with: closure)
     }
     
     @discardableResult
-    public func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping (Self) throws -> R) -> Promise<R> {
+    public func readAsync<R>(in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) -> Promise<R> {
         
         return reducer.readAsync(store: self, in: dispatchQueue, with: closure)
     }
     
-    public func dispatch(closure: @escaping (Self) -> Promise<ActionResult?>, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
+    @discardableResult
+    public func async(closure: @escaping () -> Promise<ActionResult?>) -> Promise<ActionResult?> {
         
         return Promise<ActionResult?> { fulfill, reject in
             
-            if let completion = completion {
-                
-                firstly {
-                    closure(self)
-                }.then { closureResult -> Promise<ActionResult?> in
-                    completion(self, closureResult)
-                }.then { completionResult -> Void in
-                    fulfill(completionResult)
-                }.catch { error in
-                    debugPrint("Error: \(error)")
-                    reject(error)
-                }
-            }
-            else {
-                
-                firstly {
-                    closure(self)
-                }.then { closureResult -> Void in
-                    fulfill(closureResult)
-                }.catch { error in
-                    debugPrint("Error: \(error)")
-                    reject(error)
-                }
+            firstly {
+                closure()
+            }.then { closureResult -> Void in
+                fulfill(closureResult)
+            }.catch { error in
+                debugPrint("Error: \(error)")
+                reject(error)
             }
         }
     }
     
     @discardableResult
-    public func dispatch(action: ActionType, completion: ((Self, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
+    public func async(action: AsyncAction) -> Promise<ActionResult?> {
         
         return Promise<ActionResult?> { fulfill, reject in
                 
             firstly {
-                reducer.reduce(store: self, action: action, completion: completion)
+                reducer.async(store: self, action: action)
             }.then { actionResult -> Void in
                 fulfill(actionResult)
             }.catch { error in
@@ -85,6 +72,12 @@ extension Store {
                 reject(error)
             }
         }
+    }
+    
+    @discardableResult
+    public func sync(action: SyncAction) -> ActionResult? {
+        
+        return reducer.sync(store: self, action: action)
     }
 }
 

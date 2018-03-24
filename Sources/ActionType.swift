@@ -10,6 +10,4 @@ import Foundation
 
 public protocol ActionType {
     
-    
-    
 }

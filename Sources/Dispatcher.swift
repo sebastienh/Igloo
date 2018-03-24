@@ -14,10 +14,10 @@ public protocol Dispatcher {
     var state: State { get }
     
     @discardableResult
-    func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
+    func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) throws -> R
     
     @discardableResult
-    func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R>
+    func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) -> Promise<R>
     
     /// Dispatch the action in the right store
     /// we should not put the completion in the pending tasks. They should
@@ -25,10 +25,13 @@ public protocol Dispatcher {
     /// also has to be run at each time. So the code to handle the completion should
     /// really be written in each action.
     @discardableResult
-    func dispatch<S: Store>(store: S, action: ActionType, completion: ((S, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
+    func async<S: Store>(store: S, action: AsyncAction) -> Promise<ActionResult?>
     
     @discardableResult
-    func dispatch<S: Store>(store: S, closure: @escaping (S) -> Promise<ActionResult?>, completion: ((S, ActionResult?) -> Promise<ActionResult?>)?) -> Promise<ActionResult?>
+    func sync<S: Store>(store: S, action: SyncAction) -> ActionResult?
+    
+    @discardableResult
+    func async<S: Store>(store: S, closure: @escaping () -> Promise<ActionResult?>) -> Promise<ActionResult?>
     
     func register<S: Store>(store: S)
 }
@@ -36,13 +39,13 @@ public protocol Dispatcher {
 extension Dispatcher {
     
     @discardableResult
-    public func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
+    public func readSync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) throws -> R {
         
-        return store.readSync(in: dispatchQueue, with: closure)
+        return try store.readSync(in: dispatchQueue, with: closure)
     }
     
     @discardableResult
-    public func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping (S) throws -> R) -> Promise<R> {
+    public func readAsync<S: Store, R>(store: S, in dispatchQueue: DispatchQueue, with closure: @escaping () throws -> R) -> Promise<R> {
         
         return store.readAsync(in: dispatchQueue, with: closure)
     }
@@ -53,14 +56,14 @@ extension Dispatcher {
     /// also has to be run at each time. So the code to handle the completion should
     /// really be written in each action.
     @discardableResult
-    public func dispatch<S: Store>(store: S, action: ActionType, completion: ((S, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
+    public func async<S: Store>(store: S, action: AsyncAction) -> Promise<ActionResult?> {
         
         return Promise<ActionResult?> { fulfill, reject in
                 
             // if there is no condition we execute simply the closure, followed with
             // the completion and finally all the pending tasks closures.
             firstly {
-                store.dispatch(action: action, completion: completion)
+                store.async(action: action)
             }.then { actionResult -> Void in
                 fulfill(actionResult)
             }.catch { error in
@@ -71,14 +74,20 @@ extension Dispatcher {
     }
     
     @discardableResult
-    public func dispatch<S: Store>(store: S, closure: @escaping (S) -> Promise<ActionResult?>, completion: ((S, ActionResult?) -> Promise<ActionResult?>)? = nil) -> Promise<ActionResult?> {
+    public func sync<S: Store>(store: S, action: SyncAction) -> ActionResult? {
+        
+        return store.sync(action: action)
+    }
+    
+    @discardableResult
+    public func async<S: Store>(store: S, closure: @escaping () -> Promise<ActionResult?>) -> Promise<ActionResult?> {
         
         return Promise<ActionResult?> { fulfill, reject in
             
             // if there is no condition we execute simply the closure, followed with
             // the completion and finally all the pending tasks closures.
             firstly {
-                store.dispatch(closure: closure, completion: completion)
+                store.async(closure: closure)
             }.then { actionResult in
                 fulfill(actionResult)
             }.catch { error in
