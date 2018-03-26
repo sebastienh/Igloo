@@ -88,6 +88,7 @@
 		0EFBA1192064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
 		0EFBA11A2064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
 		0EFBA11B2064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
+		0EFBA14B20684430003D8E29 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFBA14920684424003D8E29 /* Common.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		0EFBA10D206420FA003D8E29 /* DomainProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainProxy.swift; sourceTree = "<group>"; };
 		0EFBA11220642551003D8E29 /* AsyncAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAction.swift; sourceTree = "<group>"; };
 		0EFBA1172064256F003D8E29 /* SyncAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAction.swift; sourceTree = "<group>"; };
+		0EFBA14920684424003D8E29 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFBA14B20684430003D8E29 /* Common.framework in Frameworks */,
 				0E98389C1FE5974A00BD3E31 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +277,7 @@
 		0E9838941FE5970C00BD3E31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EFBA14920684424003D8E29 /* Common.framework */,
 				0E98389B1FE5974A00BD3E31 /* PromiseKit.framework */,
 				0E9838991FE5973B00BD3E31 /* PromiseKit.framework */,
 				0E9838971FE5972E00BD3E31 /* PromiseKit.framework */,

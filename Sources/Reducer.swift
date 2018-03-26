@@ -8,7 +8,6 @@
 
 import Foundation
 import PromiseKit
-import Common
 
 public protocol Reducer {
     
