@@ -92,41 +92,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E361FD821252DC80024C64F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63B0AC571D595E1B00FA21D9;
-			remoteInfo = PromiseKit;
-		};
-		0E361FDA21252DC80024C64F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 631751A81D59766500A9DDDC;
-			remoteInfo = "PMKA+Tests";
-		};
-		0E361FDC21252DC80024C64F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6314113C1D59795700E24B9E;
-			remoteInfo = PMKBridgeTests;
-		};
-		0E361FDE21252DC80024C64F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 630019221D596292003B4E30;
-			remoteInfo = PMKCoreTests;
-		};
-		0E361FE021252DC80024C64F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6314112F1D5978D700E24B9E;
-			remoteInfo = PMKDispatchTests;
-		};
 		0E9838E01FE5AA0600BD3E31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0E9838341FE58EB500BD3E31 /* Project object */;
@@ -180,7 +145,6 @@
 		0E9838DA1FE5AA0600BD3E31 /* IglooTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838ED1FE5AB6300BD3E31 /* IglooTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838FE1FE5ABBD00BD3E31 /* IglooTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IglooTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit.xcodeproj; path = ../Carthage/Checkouts/PromiseKit/PromiseKit.xcodeproj; sourceTree = "<group>"; };
 		0EFBA0EA20635DB3003D8E29 /* ActionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsFactory.swift; sourceTree = "<group>"; };
 		0EFBA0EF20641021003D8E29 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		0EFBA0F4206410E6003D8E29 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -258,18 +222,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E361FD121252DC80024C64F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0E361FD921252DC80024C64F /* PromiseKit.framework */,
-				0E361FDB21252DC80024C64F /* PMKA+Tests.xctest */,
-				0E361FDD21252DC80024C64F /* PMKBridgeTests.xctest */,
-				0E361FDF21252DC80024C64F /* PMKCoreTests.xctest */,
-				0E361FE121252DC80024C64F /* PMKDispatchTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0E9838331FE58EB500BD3E31 = {
 			isa = PBXGroup;
 			children = (
@@ -360,7 +312,6 @@
 		0ECEE12921252D65009900EE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -586,12 +537,6 @@
 			mainGroup = 0E9838331FE58EB500BD3E31;
 			productRefGroup = 0E9838401FE58EFE00BD3E31 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 0E361FD121252DC80024C64F /* Products */;
-					ProjectRef = 0ECEE11621252D43009900EE /* PromiseKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0E98383E1FE58EFE00BD3E31 /* Igloo-iOS */,
@@ -604,44 +549,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0E361FD921252DC80024C64F /* PromiseKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PromiseKit.framework;
-			remoteRef = 0E361FD821252DC80024C64F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0E361FDB21252DC80024C64F /* PMKA+Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "PMKA+Tests.xctest";
-			remoteRef = 0E361FDA21252DC80024C64F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0E361FDD21252DC80024C64F /* PMKBridgeTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PMKBridgeTests.xctest;
-			remoteRef = 0E361FDC21252DC80024C64F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0E361FDF21252DC80024C64F /* PMKCoreTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PMKCoreTests.xctest;
-			remoteRef = 0E361FDE21252DC80024C64F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0E361FE121252DC80024C64F /* PMKDispatchTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PMKDispatchTests.xctest;
-			remoteRef = 0E361FE021252DC80024C64F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0E98383D1FE58EFE00BD3E31 /* Resources */ = {
