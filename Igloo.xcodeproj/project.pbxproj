@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E36F22D20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
-		0E36F22E20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
 		0E36F22F20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
 		0E36F23020586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
 		0E9838771FE590A300BD3E31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838721FE590A200BD3E31 /* State.swift */; };
@@ -16,11 +15,6 @@
 		0E9838791FE590A300BD3E31 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838741FE590A200BD3E31 /* Store.swift */; };
 		0E98387A1FE590A300BD3E31 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838751FE590A200BD3E31 /* ActionType.swift */; };
 		0E98387B1FE590A300BD3E31 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838761FE590A300BD3E31 /* Reducer.swift */; };
-		0E98387C1FE590A800BD3E31 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838751FE590A200BD3E31 /* ActionType.swift */; };
-		0E98387D1FE590A800BD3E31 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838731FE590A200BD3E31 /* Dispatcher.swift */; };
-		0E98387E1FE590A800BD3E31 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838761FE590A300BD3E31 /* Reducer.swift */; };
-		0E98387F1FE590A800BD3E31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838721FE590A200BD3E31 /* State.swift */; };
-		0E9838801FE590A800BD3E31 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838741FE590A200BD3E31 /* Store.swift */; };
 		0E9838811FE590A800BD3E31 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838751FE590A200BD3E31 /* ActionType.swift */; };
 		0E9838821FE590A800BD3E31 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838731FE590A200BD3E31 /* Dispatcher.swift */; };
 		0E9838831FE590A800BD3E31 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838761FE590A300BD3E31 /* Reducer.swift */; };
@@ -32,11 +26,9 @@
 		0E9838891FE590A900BD3E31 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838721FE590A200BD3E31 /* State.swift */; };
 		0E98388A1FE590A900BD3E31 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838741FE590A200BD3E31 /* Store.swift */; };
 		0E98388B1FE5911000BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E98388C1FE5911100BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E98388D1FE5911100BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E98388E1FE5911200BD3E31 /* Igloo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E9838711FE58FB500BD3E31 /* Igloo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E9838961FE5970D00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838951FE5970D00BD3E31 /* PromiseKit.framework */; };
-		0E9838981FE5972E00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838971FE5972E00BD3E31 /* PromiseKit.framework */; };
 		0E98389A1FE5973B00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9838991FE5973B00BD3E31 /* PromiseKit.framework */; };
 		0E98389C1FE5974A00BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98389B1FE5974A00BD3E31 /* PromiseKit.framework */; };
 		0E9838DF1FE5AA0600BD3E31 /* Igloo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98383F1FE58EFE00BD3E31 /* Igloo.framework */; };
@@ -49,43 +41,33 @@
 		0E98390B1FE5AC3700BD3E31 /* IglooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9838CF1FE5A18700BD3E31 /* IglooTests.swift */; };
 		0E98390C1FE5AC8400BD3E31 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E98389B1FE5974A00BD3E31 /* PromiseKit.framework */; };
 		0EFBA0EB20635DB3003D8E29 /* ActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EA20635DB3003D8E29 /* ActionsFactory.swift */; };
-		0EFBA0EC20635DB3003D8E29 /* ActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EA20635DB3003D8E29 /* ActionsFactory.swift */; };
 		0EFBA0ED20635DB3003D8E29 /* ActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EA20635DB3003D8E29 /* ActionsFactory.swift */; };
 		0EFBA0EE20635DB3003D8E29 /* ActionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EA20635DB3003D8E29 /* ActionsFactory.swift */; };
 		0EFBA0F020641021003D8E29 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EF20641021003D8E29 /* Domain.swift */; };
-		0EFBA0F120641021003D8E29 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EF20641021003D8E29 /* Domain.swift */; };
 		0EFBA0F220641021003D8E29 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EF20641021003D8E29 /* Domain.swift */; };
 		0EFBA0F320641021003D8E29 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0EF20641021003D8E29 /* Domain.swift */; };
 		0EFBA0F5206410E6003D8E29 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F4206410E6003D8E29 /* Action.swift */; };
-		0EFBA0F6206410E6003D8E29 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F4206410E6003D8E29 /* Action.swift */; };
 		0EFBA0F7206410E6003D8E29 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F4206410E6003D8E29 /* Action.swift */; };
 		0EFBA0F8206410E6003D8E29 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F4206410E6003D8E29 /* Action.swift */; };
 		0EFBA0FA20641168003D8E29 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F920641168003D8E29 /* Permissions.swift */; };
-		0EFBA0FB20641168003D8E29 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F920641168003D8E29 /* Permissions.swift */; };
 		0EFBA0FC20641168003D8E29 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F920641168003D8E29 /* Permissions.swift */; };
 		0EFBA0FD20641168003D8E29 /* Permissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0F920641168003D8E29 /* Permissions.swift */; };
 		0EFBA0FF2064117F003D8E29 /* DomainPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0FE2064117F003D8E29 /* DomainPermissions.swift */; };
-		0EFBA1002064117F003D8E29 /* DomainPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0FE2064117F003D8E29 /* DomainPermissions.swift */; };
 		0EFBA1012064117F003D8E29 /* DomainPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0FE2064117F003D8E29 /* DomainPermissions.swift */; };
 		0EFBA1022064117F003D8E29 /* DomainPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA0FE2064117F003D8E29 /* DomainPermissions.swift */; };
 		0EFBA10420641FD3003D8E29 /* IglooError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10320641FD3003D8E29 /* IglooError.swift */; };
-		0EFBA10520641FD3003D8E29 /* IglooError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10320641FD3003D8E29 /* IglooError.swift */; };
 		0EFBA10620641FD3003D8E29 /* IglooError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10320641FD3003D8E29 /* IglooError.swift */; };
 		0EFBA10720641FD3003D8E29 /* IglooError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10320641FD3003D8E29 /* IglooError.swift */; };
 		0EFBA1092064200C003D8E29 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1082064200C003D8E29 /* Message.swift */; };
-		0EFBA10A2064200C003D8E29 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1082064200C003D8E29 /* Message.swift */; };
 		0EFBA10B2064200C003D8E29 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1082064200C003D8E29 /* Message.swift */; };
 		0EFBA10C2064200C003D8E29 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1082064200C003D8E29 /* Message.swift */; };
 		0EFBA10E206420FA003D8E29 /* DomainProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10D206420FA003D8E29 /* DomainProxy.swift */; };
-		0EFBA10F206420FA003D8E29 /* DomainProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10D206420FA003D8E29 /* DomainProxy.swift */; };
 		0EFBA110206420FA003D8E29 /* DomainProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10D206420FA003D8E29 /* DomainProxy.swift */; };
 		0EFBA111206420FA003D8E29 /* DomainProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA10D206420FA003D8E29 /* DomainProxy.swift */; };
 		0EFBA11320642551003D8E29 /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA11220642551003D8E29 /* AsyncAction.swift */; };
-		0EFBA11420642551003D8E29 /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA11220642551003D8E29 /* AsyncAction.swift */; };
 		0EFBA11520642551003D8E29 /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA11220642551003D8E29 /* AsyncAction.swift */; };
 		0EFBA11620642551003D8E29 /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA11220642551003D8E29 /* AsyncAction.swift */; };
 		0EFBA1182064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
-		0EFBA1192064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
 		0EFBA11A2064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
 		0EFBA11B2064256F003D8E29 /* SyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFBA1172064256F003D8E29 /* SyncAction.swift */; };
 		0EFBA14B20684430003D8E29 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFBA14920684424003D8E29 /* Common.framework */; };
@@ -119,7 +101,6 @@
 		0E36F22C20586009008C8451 /* ActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
 		0E98383F1FE58EFE00BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838431FE58EFE00BD3E31 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		0E98384D1FE58F1800BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838501FE58F1800BD3E31 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		0E98385A1FE58F2D00BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E98385D1FE58F2D00BD3E31 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -164,14 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9838961FE5970D00BD3E31 /* PromiseKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E9838491FE58F1800BD3E31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E9838981FE5972E00BD3E31 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				0E98383F1FE58EFE00BD3E31 /* Igloo.framework */,
-				0E98384D1FE58F1800BD3E31 /* Igloo.framework */,
 				0E98385A1FE58F2D00BD3E31 /* Igloo.framework */,
 				0E9838671FE58F4300BD3E31 /* Igloo.framework */,
 				0E9838DA1FE5AA0600BD3E31 /* IglooTests-iOS.xctest */,
@@ -327,14 +299,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E98384A1FE58F1800BD3E31 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E98388C1FE5911100BD3E31 /* Igloo.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0E9838571FE58F2D00BD3E31 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,25 +335,6 @@
 			name = "Igloo-iOS";
 			productName = "IglooKit-iOS";
 			productReference = 0E98383F1FE58EFE00BD3E31 /* Igloo.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		0E98384C1FE58F1800BD3E31 /* Igloo-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9838521FE58F1800BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-watchOS" */;
-			buildPhases = (
-				0E9838481FE58F1800BD3E31 /* Sources */,
-				0E9838491FE58F1800BD3E31 /* Frameworks */,
-				0E98384A1FE58F1800BD3E31 /* Headers */,
-				0E98384B1FE58F1800BD3E31 /* Resources */,
-				0E98389F1FE597D300BD3E31 /* Copy PromiseKit */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Igloo-watchOS";
-			productName = "IglooKit-watchOS";
-			productReference = 0E98384D1FE58F1800BD3E31 /* Igloo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0E9838591FE58F2D00BD3E31 /* Igloo-tvOS */ = {
@@ -500,10 +445,6 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
-					0E98384C1FE58F1800BD3E31 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 					0E9838591FE58F2D00BD3E31 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -539,7 +480,6 @@
 			projectRoot = "";
 			targets = (
 				0E98383E1FE58EFE00BD3E31 /* Igloo-iOS */,
-				0E98384C1FE58F1800BD3E31 /* Igloo-watchOS */,
 				0E9838591FE58F2D00BD3E31 /* Igloo-tvOS */,
 				0E9838661FE58F4300BD3E31 /* Igloo-macOS */,
 				0E9838D91FE5AA0600BD3E31 /* IglooTests-iOS */,
@@ -551,13 +491,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		0E98383D1FE58EFE00BD3E31 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E98384B1FE58F1800BD3E31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -609,21 +542,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/PromiseKit.framework",
-			);
-			name = "Copy PromiseKit";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		0E98389F1FE597D300BD3E31 /* Copy PromiseKit */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/watchOS/PromiseKit.framework",
 			);
 			name = "Copy PromiseKit";
 			outputPaths = (
@@ -715,29 +633,6 @@
 				0EFBA0FA20641168003D8E29 /* Permissions.swift in Sources */,
 				0EFBA0F020641021003D8E29 /* Domain.swift in Sources */,
 				0EFBA1092064200C003D8E29 /* Message.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E9838481FE58F1800BD3E31 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EFBA0EC20635DB3003D8E29 /* ActionsFactory.swift in Sources */,
-				0EFBA10F206420FA003D8E29 /* DomainProxy.swift in Sources */,
-				0EFBA1002064117F003D8E29 /* DomainPermissions.swift in Sources */,
-				0EFBA1192064256F003D8E29 /* SyncAction.swift in Sources */,
-				0EFBA10520641FD3003D8E29 /* IglooError.swift in Sources */,
-				0E9838801FE590A800BD3E31 /* Store.swift in Sources */,
-				0EFBA0F6206410E6003D8E29 /* Action.swift in Sources */,
-				0E98387D1FE590A800BD3E31 /* Dispatcher.swift in Sources */,
-				0EFBA11420642551003D8E29 /* AsyncAction.swift in Sources */,
-				0E98387C1FE590A800BD3E31 /* ActionType.swift in Sources */,
-				0E98387E1FE590A800BD3E31 /* Reducer.swift in Sources */,
-				0E36F22E20586009008C8451 /* ActionResult.swift in Sources */,
-				0E98387F1FE590A800BD3E31 /* State.swift in Sources */,
-				0EFBA0FB20641168003D8E29 /* Permissions.swift in Sources */,
-				0EFBA0F120641021003D8E29 /* Domain.swift in Sources */,
-				0EFBA10A2064200C003D8E29 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,161 +943,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0E9838531FE58F1800BD3E31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EE22LK9AUV;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/watchOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-watchOS";
-				PRODUCT_NAME = Igloo;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		0E9838541FE58F1800BD3E31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EE22LK9AUV;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/watchOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Sources/Info-watchOS.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "media.nebula.Igloo-watchOS";
-				PRODUCT_NAME = Igloo;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1914,15 +1654,6 @@
 			buildConfigurations = (
 				0E9838461FE58EFE00BD3E31 /* Debug */,
 				0E9838471FE58EFE00BD3E31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0E9838521FE58F1800BD3E31 /* Build configuration list for PBXNativeTarget "Igloo-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E9838531FE58F1800BD3E31 /* Debug */,
-				0E9838541FE58F1800BD3E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
