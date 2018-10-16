@@ -2,7 +2,7 @@
 //  IglooKit.h
 //  IglooKit
 //
-//  Created by Sebastien hamel on 2017-12-16.
+//  Created by Sébastien Hamel on 2017-12-16.
 //
 
 // see https://stackoverflow.com/questions/30704268/no-umbrella-header-found-for-target-module-map-will-not-be-generated

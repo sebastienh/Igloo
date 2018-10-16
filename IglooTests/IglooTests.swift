@@ -2,7 +2,7 @@
 //  IglooKitTests.swift
 //  IglooKit
 //
-//  Created by Sebastien hamel on 2017-12-16.
+//  Created by Sébastien Hamel on 2017-12-16.
 //
 
 import XCTest

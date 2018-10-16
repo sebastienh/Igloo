@@ -2,8 +2,8 @@
 //  Dispatcher.swift
 //  igloo
 //
-//  Created by Sebastien hamel on 2017-11-12.
-//  Copyright © 2017 Nebula Media. All rights reserved.
+//  Created by Sébastien Hamel on 2017-11-12.
+//  Copyright © 2017 Noosera Inc.. All rights reserved.
 //
 
 import Foundation
