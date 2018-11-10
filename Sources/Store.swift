@@ -3,7 +3,7 @@
 //  igloo
 //
 //  Created by Sébastien Hamel on 2017-08-31.
-//  Copyright © 2017 Noosera Inc. All rights reserved.
+//  Copyright © 2017 Textually Inc. All rights reserved.
 //
 
 import Foundation
