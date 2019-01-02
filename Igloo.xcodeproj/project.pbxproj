@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2ED42021DC6C4A0099BF56 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2ED41F21DC6C4A0099BF56 /* Log.swift */; };
+		0E2ED42121DC6C4A0099BF56 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2ED41F21DC6C4A0099BF56 /* Log.swift */; };
+		0E2ED42221DC6C4A0099BF56 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2ED41F21DC6C4A0099BF56 /* Log.swift */; };
 		0E36F22D20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
 		0E36F22F20586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
 		0E36F23020586009008C8451 /* ActionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E36F22C20586009008C8451 /* ActionResult.swift */; };
@@ -98,6 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2ED41F21DC6C4A0099BF56 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		0E36F22C20586009008C8451 /* ActionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionResult.swift; sourceTree = "<group>"; };
 		0E98383F1FE58EFE00BD3E31 /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9838431FE58EFE00BD3E31 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				0E9838711FE58FB500BD3E31 /* Igloo.h */,
+				0E2ED41F21DC6C4A0099BF56 /* Log.swift */,
 				0EFBA0F920641168003D8E29 /* Permissions.swift */,
 				0EFBA0FE2064117F003D8E29 /* DomainPermissions.swift */,
 				0E9838751FE590A200BD3E31 /* ActionType.swift */,
@@ -626,6 +631,7 @@
 				0E9838791FE590A300BD3E31 /* Store.swift in Sources */,
 				0EFBA0F5206410E6003D8E29 /* Action.swift in Sources */,
 				0E98387A1FE590A300BD3E31 /* ActionType.swift in Sources */,
+				0E2ED42021DC6C4A0099BF56 /* Log.swift in Sources */,
 				0EFBA11320642551003D8E29 /* AsyncAction.swift in Sources */,
 				0E9838781FE590A300BD3E31 /* Dispatcher.swift in Sources */,
 				0E98387B1FE590A300BD3E31 /* Reducer.swift in Sources */,
@@ -649,6 +655,7 @@
 				0E9838851FE590A900BD3E31 /* Store.swift in Sources */,
 				0EFBA0F7206410E6003D8E29 /* Action.swift in Sources */,
 				0E9838821FE590A800BD3E31 /* Dispatcher.swift in Sources */,
+				0E2ED42121DC6C4A0099BF56 /* Log.swift in Sources */,
 				0EFBA11520642551003D8E29 /* AsyncAction.swift in Sources */,
 				0E9838811FE590A800BD3E31 /* ActionType.swift in Sources */,
 				0E9838831FE590A800BD3E31 /* Reducer.swift in Sources */,
@@ -672,6 +679,7 @@
 				0E98388A1FE590A900BD3E31 /* Store.swift in Sources */,
 				0EFBA0F8206410E6003D8E29 /* Action.swift in Sources */,
 				0E9838871FE590A900BD3E31 /* Dispatcher.swift in Sources */,
+				0E2ED42221DC6C4A0099BF56 /* Log.swift in Sources */,
 				0EFBA11620642551003D8E29 /* AsyncAction.swift in Sources */,
 				0E9838861FE590A900BD3E31 /* ActionType.swift in Sources */,
 				0E9838881FE590A900BD3E31 /* Reducer.swift in Sources */,
@@ -760,7 +768,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -794,7 +802,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

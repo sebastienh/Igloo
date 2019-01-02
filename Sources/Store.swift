@@ -8,6 +8,8 @@
 
 import Foundation
 import PromiseKit
+import Common
+import os
 
 public protocol Store: class {
     
@@ -52,7 +54,9 @@ extension Store {
             }.then { closureResult -> Void in
                 fulfill(closureResult)
             }.catch { error in
-                debugPrint("Error: \(error)")
+                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+                os_log("Error: %@", log: Log.Igloo.all, type: .error, %%error)
+                #endif
                 reject(error)
             }
         }
@@ -68,7 +72,9 @@ extension Store {
             }.then { actionResult -> Void in
                 fulfill(actionResult)
             }.catch { error in
-                debugPrint("Error: \(error)")
+                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+                os_log("Error: %@", log: Log.Igloo.all, type: .error, %%error)
+                #endif
                 reject(error)
             }
         }
