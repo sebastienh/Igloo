@@ -2,7 +2,7 @@
 //  Domain.swift
 //  Igloo
 //
-//  Created by Sebastien hamel on 2018-03-22.
+//  Created by Sébastien Hamel on 2018-03-22.
 //
 
 import Foundation
@@ -18,7 +18,7 @@ protocol Domain {
     
     func setValue<T>(for property: Dynamic<T>, permissions: DomainPermissions) throws
     
-    func getValue<T>(for property: Dynamic<T>, permissions: DomainPermissions) -> T
+    func getValue<T>(for property: Dynamic<T>, permissions: DomainPermissions) throws -> T
 }
 
 extension Domain {
@@ -35,14 +35,13 @@ extension Domain {
         guard permissions.write else {
             throw IglooError.custom(message: "Write to domain: \(name), is not allowed.")
         }
-        
-        fatalError("missing implementation")
+        assert(false, "missing implementation")
     }
     
-    func getValue<T>(for property: Dynamic<T>, permissions: DomainPermissions) -> T {
+    func getValue<T>(for property: Dynamic<T>, permissions: DomainPermissions) throws -> T {
         
-        fatalError("missing implementation")
-        
+        assert(false, "missing implementation")
+        throw IglooError.custom(message: "Write to domain: \(name), is not allowed.")
     }
     
     

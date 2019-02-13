@@ -2,12 +2,14 @@
 //  Dispatcher.swift
 //  igloo
 //
-//  Created by Sebastien hamel on 2017-11-12.
-//  Copyright © 2017 Nebula Media. All rights reserved.
+//  Created by Sébastien Hamel on 2017-11-12.
+//  Copyright © 2017 Textually Inc. All rights reserved.
 //
 
 import Foundation
 import PromiseKit
+import Common
+import os
 
 public protocol Dispatcher {
     
@@ -67,7 +69,9 @@ extension Dispatcher {
             }.then { actionResult -> Void in
                 fulfill(actionResult)
             }.catch { error in
-                debugPrint("Error: \(error)")
+                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+                os_log("Error: %@", log: Log.Igloo.all, type: .error, %%error)
+                #endif 
                 reject(error)
             }
         }
@@ -91,7 +95,9 @@ extension Dispatcher {
             }.then { actionResult in
                 fulfill(actionResult)
             }.catch { error in
-                debugPrint("Error: \(error)")
+                #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+                os_log("Error: %@", log: Log.Igloo.all, type: .error, %%error)
+                #endif 
                 reject(error)
             }
         }
